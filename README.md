@@ -5,7 +5,4 @@
 
 This is a study on Mongo, Express, Angular and Node (MEAN).
 
-<br>
-
-## Architecture
 ![](https://udemy-images.udemy.com/course/240x135/1013310_91c6_5.jpg)
