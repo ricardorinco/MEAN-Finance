@@ -1,9 +1,9 @@
-const gulp = require('gulp')
-const babel = require('gulp-babel')
-const uglify = require('gulp-uglify')
-const uglifycss = require('gulp-uglifycss')
-const concat = require('gulp-concat')
-const htmlmin = require('gulp-htmlmin')
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const uglifycss = require('gulp-uglifycss');
+const concat = require('gulp-concat');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.assets']);
 
@@ -15,7 +15,7 @@ gulp.task('app.html', function () {
 
 gulp.task('app.css', function () {
     gulp.src('app/**/*.css')
-        .pipe(uglifycss({ 'uglyComments': true }))
+        .pipe(uglifycss({ "uglyComments": true }))
         .pipe(concat('app.min.css'))
         .pipe(gulp.dest('public/assets/css'))
 });

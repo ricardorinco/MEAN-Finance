@@ -1,9 +1,9 @@
-const gulp = require('gulp')
-const watch = require('gulp-watch')
-const webserver = require('gulp-webserver')
+const gulp = require('gulp');
+const watch = require('gulp-watch');
+const webserver = require('gulp-webserver');
 
 gulp.task('server', ['watch'], function () {
-    gulp.src('server').pipe(webserver({
+    gulp.src('public').pipe(webserver({
         livereload: true,
         port: 4000,
         open: true
