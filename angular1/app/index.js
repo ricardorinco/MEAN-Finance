@@ -1,5 +1,7 @@
-angular.module('financeApp', [
+(function () {
+  angular.module('financeApp', [
     'ui.router',
     'ngAnimate',
     'toastr'
   ]);
+})();
