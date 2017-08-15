@@ -11,3 +11,7 @@ html {
 #toast-container {
     top: 65px;
 }
+
+.table-actions {
+    width: 140px;
+}
