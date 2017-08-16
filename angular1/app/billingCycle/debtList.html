@@ -16,22 +16,22 @@
                 </td>
                 <td>
                     <input ng-model="debt.value" class="form-control" placeholder="Informe o valor"
-                        ng-readonly="billing.tabDelete" type="number">
+                        ng-change="billing.calculateValues()" ng-readonly="billing.tabDelete" type="number">
                 </td>
                 <td>
                     <input ng-model="debt.status" class="form-control" placeholder="Informe o status"
                         ng-readonly="billing.tabDelete">
                 </td>
                 <td class="table-actions">
-                    <button class="btn btn-success" ng-class="{ disable: billing.tabDelete }"
+                    <button class="btn btn-success" ng-disabled="billing.tabDelete"
                         ng-click="billing.addDebt($index)">
                         <i class="fa fa-plus"></i>
                     </button>
-                    <button class="btn btn-warning" ng-class="{ disable: billing.tabDelete }"
+                    <button class="btn btn-warning" ng-disabled="billing.tabDelete"
                         ng-click="billing.cloneDebt($index, debt)">
                         <i class="fa fa-clone"></i>
                     </button>
-                    <button class="btn btn-danger" ng-class="{ disable: billing.tabDelete }"
+                    <button class="btn btn-danger" ng-disabled="billing.tabDelete"
                         ng-click="billing.deleteDebt($index)">
                         <i class="fa fa-trash-o"></i>
                     </button>
