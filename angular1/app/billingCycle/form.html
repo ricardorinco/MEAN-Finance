@@ -2,10 +2,22 @@
     <div class="box-body">
         <field id="name" label="Nome", grid="12 6 4" placeholder="Informe o nome"
             model="billing.billingCycle.name" readonly="billing.tabDelete"></field>
-        <field id="month" label="Mês", grid="12 6 4" placeholder="Informe o Mês"
+        <field id="month" label="Mês", grid="12 6 4" placeholder="Informe o mês"
             type="number" model="billing.billingCycle.month" readonly="billing.tabDelete"></field>
-        <field id="year" label="Ano", grid="12 6 4" placeholder="Informe o Ano"
+        <field id="year" label="Ano", grid="12 6 4" placeholder="Informe o ano"
             type="number" model="billing.billingCycle.year" readonly="billing.tabDelete"></field>
+        <div class="col-xs-12 col-sm-6">
+            <fieldset>
+                <legend>Créditos</legend>
+                <div ng-include="'billingCycle/creditList.html'"></div>
+            </fieldset>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <fieldset>
+                <legend>Débitos</legend>
+                <div ng-include="'billingCycle/debtList.html'"></div>
+            </fieldset>
+        </div>
     </div>
     <div class="box-footer">
         <button class="btn btn-primary" ng-click="billing.create()"
