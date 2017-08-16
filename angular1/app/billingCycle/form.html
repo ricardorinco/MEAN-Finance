@@ -6,6 +6,14 @@
             type="number" model="billing.billingCycle.month" readonly="billing.tabDelete"></field>
         <field id="year" label="Ano", grid="12 6 4" placeholder="Informe o ano"
             type="number" model="billing.billingCycle.year" readonly="billing.tabDelete"></field>
+        
+        <div class="col-xs-12">
+            <fieldset>
+                <legend>Resumo</legend>
+                <div ng-include="'billingCycle/summary.html'"></div>
+            </fieldset>
+        </div>
+        
         <div class="col-xs-12 col-sm-6">
             <fieldset>
                 <legend>Créditos</legend>

@@ -18,13 +18,16 @@
                         ng-readonly="billing.tabDelete" type="number">
                 </td>
                 <td class="table-actions">
-                    <button class="btn btn-success" ng-class="{ disable: billing.tabDelete }">
+                    <button class="btn btn-success" ng-class="{ disable: billing.tabDelete }"
+                        ng-click="billing.addCredit($index)">
                         <i class="fa fa-plus"></i>
                     </button>
-                    <button class="btn btn-warning" ng-class="{ disable: billing.tabDelete }">
+                    <button class="btn btn-warning" ng-class="{ disable: billing.tabDelete }"
+                        ng-click="billing.cloneCredit($index, credit)">
                         <i class="fa fa-clone"></i>
                     </button>
-                    <button class="btn btn-danger" ng-class="{ disable: billing.tabDelete }">
+                    <button class="btn btn-danger" ng-class="{ disable: billing.tabDelete }"
+                        ng-click="billing.deleteCredit($index)">
                         <i class="fa fa-trash-o"></i>
                     </button>
                 </td>
