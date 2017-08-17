@@ -1,22 +1,30 @@
 (function () {
     angular.module('financeApp').controller('BillingCycleController', [
         '$http',
+        '$location',
         'messages',
         'tabs',
         BillingCycleController
     ]);
 
-    function BillingCycleController($http, messages, tabs) {
+    function BillingCycleController($http, $location, messages, tabs) {
         const vm = this;
         const url = 'http://localhost:3003/api/billingCycles';
 
         vm.refresh = function () {
-            $http.get(url).then(function (response) {
+            const page = parseInt($location.search().page) || 1;
+
+            $http.get(`${url}?skip=${(page - 1) * 12}&limit=12`).then(function (response) {
                 vm.billingCycle = { credits: [{}], debts: [{}] };
                 vm.billingCycles = response.data;
                 vm.calculateValues();
 
-                tabs.show(vm, { tabList: true, tabCreate: true });
+                
+
+                $http.get(`${url}/count`).then(function (response) {
+                    vm.pages = Math.ceil(response.data.value / 10);
+                    tabs.show(vm, { tabList: true, tabCreate: true });
+                });
             });
         };
 

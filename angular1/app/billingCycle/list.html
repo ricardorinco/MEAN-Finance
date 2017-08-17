@@ -10,9 +10,9 @@
         </thead>
         <tbody>
             <tr ng-repeat="billingCycle in billing.billingCycles">
-                <td>{{ billingCycle.name }}</td>
-                <td>{{ billingCycle.month }}</td>
-                <td>{{ billingCycle.year }}</td>
+                <td>{{:: billingCycle.name }}</td>
+                <td>{{:: billingCycle.month }}</td>
+                <td>{{:: billingCycle.year }}</td>
                 <td class="table-actions">
                     <button class="btn btn-warning" ng-click="billing.showTabUpdate(billingCycle)">
                         <i class="fa fa-pencil"></i>
@@ -24,4 +24,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="box-footer clearfix">
+        <paginator url="/#!/billingCycles" pages="{{ billing.pages }}"></paginator>
+    </div>
 </div>
