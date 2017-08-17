@@ -1,5 +1,5 @@
 const express = require('express');
-const auth = require('./auth')
+const auth = require('./auth');
 
 module.exports = function (server) {
     // Rotas abertas
@@ -18,8 +18,8 @@ module.exports = function (server) {
     protectedApi.use(auth);
 
     const billingCycleService = require('./../api/billingCycle/billingCycleService');
-    billingCycleService.register(router, '/billingCycles');
+    billingCycleService.register(protectedApi, '/billingCycles');
 
     const billingSummaryService = require('./../api/billingSummary/billingSummaryService');
-    router.route('/billingSummary').get(billingSummaryService.getSummary);
+    protectedApi.route('/billingSummary').get(billingSummaryService.getSummary);
 };

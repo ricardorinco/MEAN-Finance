@@ -1,10 +1,10 @@
-const restfull = require('node-restfull');
-const mongoose = restfull.mongoose;
+const restful = require('node-restful');
+const mongoose = restful.mongoose;
 
-const userSchema = new mongooser.Schema({
+const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, min: 6, max: 12, required: true }
 });
 
-module.exports = restfull.model('User', userSchema);
+module.exports = restful.model('User', userSchema);
