@@ -7,16 +7,25 @@ This is a study on Mongo, Express, Angular and Node (MEAN).
 
 ![](https://udemy-images.udemy.com/course/240x135/1013310_91c6_5.jpg)
 
-###### Screenshots
+## Screenshots
+
+Dashboard:
 
 ![](http://insidecode.com.br/apps/FinanceAPP/dashboard.png)
-Screen: Dashboard.
+
+
+Add Billing Cycle:
 
 ![](http://insidecode.com.br/apps/FinanceAPP/adicionar_ciclo_pagamentos.png)
-Screen: Add Billing Cycle.
+
+
+Update Billing Cycle:
 
 ![](http://insidecode.com.br/apps/FinanceAPP/alterar_ciclo_pagamentos.png)
-Screen: Update Billing Cycle.
+
+
+Delete Billing Cycle:
 
 ![](http://insidecode.com.br/apps/FinanceAPP/deletar_ciclo_pagamentos.png)
-Screen: Delete Billing Cycle.
+
+
